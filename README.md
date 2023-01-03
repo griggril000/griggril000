@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @griggril000
+👋 Hi, I’m @griggril000
 
 <!---
 griggril000/griggril000 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
