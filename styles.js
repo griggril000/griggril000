@@ -16,24 +16,28 @@ function getCookie(name) {
 var fontSize = document.getElementById('fontSize');
 var fontFamily = document.getElementById('fontFamily');
 
-fontSize.addEventListener('change', function() {
+fontSize.addEventListener('change', function () {
   setCookie('fontSize', this.value);
-  document.body.style.fontSize = this.value;
+  document.body.classList.remove('small', 'medium', 'large');
+  document.body.classList.add(this.value);
 });
 
-fontFamily.addEventListener('change', function() {
+fontFamily.addEventListener('change', function () {
   setCookie('fontFamily', this.value);
-  document.body.style.fontFamily = this.value;
+  document.body.classList.remove('sans-serif', 'serif');
+  document.body.classList.add(this.value);
 });
 
 var fontSizeCookie = getCookie('fontSize');
 if (fontSizeCookie) {
-  document.body.style.fontSize = fontSizeCookie;
+  document.body.classList.remove('small', 'medium', 'large');
+  document.body.classList.add(fontSizeCookie);
   fontSize.value = fontSizeCookie;
 }
 
 var fontFamilyCookie = getCookie('fontFamily');
 if (fontFamilyCookie) {
-  document.body.style.fontFamily = fontFamilyCookie;
+  document.body.classList.remove('sans-serif', 'serif');
+  document.body.classList.add(fontFamilyCookie);
   fontFamily.value = fontFamilyCookie;
 }
